@@ -13,11 +13,22 @@
  *= require foundation_and_overrides
  */
 
+ @font-face {
+  font-family: Proxima-Nova;
+  src: url('ProximaNova-Light.otf');
+}
+
+.header-title {
+  font-family: Proxima-Nova;
+  font-size: 60px;
+}
 
 ul.hmenu {
+  font-family: Proxima-Nova;
   list-style: none;
   margin: 0 0 2em;
   padding: 0;
+  float: right;
 }
 
 ul.hmenu li {
