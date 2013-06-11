@@ -28,12 +28,12 @@
     <%= f.text_field :description %>
   </div>
   <div class="field">
-    <%= f.label :purchase_date %><br />
-    <%= f.date_select :purchase_date %>
+    <%= f.label :purchase_date, "Purchased Date" %><br />
+    <%= f.text_field :purchase_date, :type => "date" %>
   </div>
   <div class="field">
-    <%= f.label :exp_date %><br />
-    <%= f.date_select :exp_date %>
+    <%= f.label :exp_date, "Expiration Date" %><br />
+    <%= f.text_field :exp_date, :type => "date" %>
   </div>
   <div class="actions">
     <%= f.submit %>
