@@ -6,6 +6,8 @@ gem 'rails', '3.2.13'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'devise'
+gem 'carrierwave'
+gem 'fog'
 
 group :development do
   gem 'sqlite3'
