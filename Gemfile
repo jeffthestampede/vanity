@@ -8,6 +8,7 @@ gem 'rails', '3.2.13'
 gem 'devise'
 gem 'carrierwave'
 gem 'fog'
+gem 'figaro'
 
 group :development do
   gem 'sqlite3'

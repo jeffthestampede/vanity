@@ -50,6 +50,9 @@ GEM
     excon (0.23.0)
     execjs (1.4.0)
       multi_json (~> 1.0)
+    figaro (0.6.4)
+      bundler (~> 1.0)
+      rails (>= 3, < 5)
     fog (1.12.1)
       builder
       excon (~> 0.23.0)
@@ -138,6 +141,7 @@ DEPENDENCIES
   carrierwave
   coffee-rails (~> 3.2.1)
   devise
+  figaro
   fog
   jquery-rails
   pg
