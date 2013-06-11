@@ -14,7 +14,10 @@
 /log/*.log
 /tmp
 .DS_Store
+/public/uploads/tmp
 
 
 # Ignore application configuration
 /config/application.yml
+
+
