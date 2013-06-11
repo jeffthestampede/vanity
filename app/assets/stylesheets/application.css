@@ -34,3 +34,7 @@ ul.hmenu {
 ul.hmenu li {
   display: inline;
 }
+
+.footer {
+  border-top: 2px solid black;
+}
