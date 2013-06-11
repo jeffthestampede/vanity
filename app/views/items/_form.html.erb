@@ -35,6 +35,10 @@
     <%= f.label :exp_date, "Expiration Date" %><br />
     <%= f.text_field :exp_date, :type => "date" %>
   </div>
+  <div class="field">
+    <%= f.label :picture, "Picture/Swatch" %><br />
+    <%= f.file_field :picture %>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>
