@@ -18,6 +18,10 @@
   src: url('ProximaNova-Light.otf');
 }
 
+.icon-heart {
+  color:pink;
+}
+
 .header-title {
   font-family: Proxima-Nova;
   font-size: 60px;
@@ -35,21 +39,29 @@ ul.hmenu li {
   display: inline;
 }
 
-.container {
-  height: 400px;
-}
-
 .tagline {
   font-family: Proxima-Nova;
-  color: white;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 20px;
 }
 
-.footer {
-  position: absolute;
-  bottom: 0;
+.splash-background .container {
+  height: 350px;
 }
 
 .splash-background {
   background-image: url(/assets/mbackground.jpg);
   background-size: cover;
+}
+
+.footer {
+  margin-top: 20px;
+  padding: 15px 20px;
+}
+
+.footer .row p {
+  font-size: 10px;
+  font-family: Proxima-Nova;
 }
