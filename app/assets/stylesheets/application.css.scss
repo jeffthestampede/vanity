@@ -35,6 +35,21 @@ ul.hmenu li {
   display: inline;
 }
 
+.container {
+  height: 400px;
+}
+
+.tagline {
+  font-family: Proxima-Nova;
+  color: white;
+}
+
 .footer {
-  border-top: 2px solid black;
+  position: absolute;
+  bottom: 0;
+}
+
+.splash-background {
+  background-image: url(/assets/mbackground.jpg);
+  background-size: cover;
 }
