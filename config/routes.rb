@@ -1,8 +1,12 @@
 Vanity::Application.routes.draw do
   devise_for :users
 
+  root :to => 'application#index'
 
   resources :items
+
+  get '/users/:id', :to => 'users#show', :as => 'users_show'
+
 
 
   # The priority is based upon order of creation:
@@ -54,7 +58,6 @@ Vanity::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => 'application#index'
 
   # See how all your routes lay out with "rake routes"
 
