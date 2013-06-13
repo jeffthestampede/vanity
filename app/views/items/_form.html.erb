@@ -1,49 +1,63 @@
-<div class="row">
-  <div class="large-9 columns">
-    <%= form_for(@item) do |f| %>
-      <% if @item.errors.any? %>
-        <div id="error_explanation">
-          <h2><%= pluralize(@item.errors.count, "error") %> prohibited this item from being saved:</h2>
+<%= form_for(@item) do |f| %>
+  <% if @item.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@item.errors.count, "error") %> prohibited this item from being saved:</h2>
 
-          <ul>
-          <% @item.errors.full_messages.each do |msg| %>
-            <li><%= msg %></li>
-          <% end %>
-          </ul>
-        </div>
+      <ul>
+      <% @item.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
       <% end %>
-
+      </ul>
+    </div>
+  <% end %>
+  <div class="row">
+    <div class="small-4 columns">
       <div class="field">
-        <%= f.label :name %><br />
-        <%= f.text_field :name %>
-      </div>
-      <div class="field">
-        <%= f.label :brand %><br />
+        <%= f.label :brand %>
         <%= f.text_field :brand %>
       </div>
+    </div>
+    <div class="small-4 columns">
       <div class="field">
-        <%= f.label :category %><br />
+        <%= f.label :name %>
+        <%= f.text_field :name %>
+      </div>
+    </div>
+    <div class="small-4 columns">
+      <div class="field">
+        <%= f.label :category %>
         <%= f.text_field :category %>
       </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="small-12 columns">
       <div class="field">
-        <%= f.label :description %><br />
+        <%= f.label :description %>
         <%= f.text_field :description %>
       </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="small-4 columns">
       <div class="field">
-        <%= f.label :purchase_date, "Purchased Date" %><br />
+        <%= f.label :purchase_date, "Purchased Date" %>
         <%= f.text_field :purchase_date, :type => "date" %>
       </div>
+    </div>
+    <div class="small-4 pull-4 columns">
       <div class="field">
-        <%= f.label :exp_date, "Expiration Date" %><br />
+        <%= f.label :exp_date, "Expiration Date" %>
         <%= f.text_field :exp_date, :type => "date" %>
       </div>
-      <div class="field">
-        <%= f.label :picture, "Picture/Swatch" %><br />
-        <%= f.file_field :picture %>
-      </div>
-      <div class="actions">
-        <%= f.submit %>
-      </div>
-    <% end %>
+    </div>
   </div>
-</div>
+  <div class="field">
+    <%= f.label :picture, "Picture/Swatch" %>
+    <%= f.file_field :picture %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Add item", :class => 'button expand secondary' %>
+  </div>
+<% end %>

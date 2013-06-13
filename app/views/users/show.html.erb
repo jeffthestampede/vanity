@@ -8,6 +8,35 @@
   </div>
 </div>
 
+<div class="row">
+  <div id="proxima" class="large-12 columns">
+    <table id="center">
+      <tr>
+        <th>Brand</th>
+        <th>Name</th>
+        <th>Category</th>
+        <th>Purchase Date</th>
+        <th>Expiration Date</th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+
+      <% @items.each do |item| %>
+        <tr>
+          <td><%= item.brand %></td>
+          <td><%= item.name %></td>
+          <td><%= item.category %></td>
+          <td><%= item.purchase_date %></td>
+          <td><%= item.exp_date %></td>
+          <td><%= link_to 'Details', item %></td>
+          <td><%= link_to 'Edit', edit_item_path(item) %></td>
+          <td><%= link_to 'Delete', item, method: :delete, data: { confirm: 'Are you sure?' }, :controller => "users", :action => "show", :id => current_user.id %></td>
+        </tr>
+      <% end %>
+    </table>
+  </div>
+</div>
 
 <div class= "row">
     <ul class="large-block-grid-4">
@@ -15,36 +44,6 @@
         <li><%= image_tag(item.picture_url) %></li>
       <% end %>
     </ul>
-</div>
-
-<div class= "row">
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Brand</th>
-    <th>Category</th>
-    <th>Description</th>
-    <th>Purchase date</th>
-    <th>Exp date</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @items.each do |item| %>
-  <tr>
-    <td><%= item.name %></td>
-    <td><%= item.brand %></td>
-    <td><%= item.category %></td>
-    <td><%= item.description %></td>
-    <td><%= item.purchase_date %></td>
-    <td><%= item.exp_date %></td>
-    <td><%= link_to 'Show', item %></td>
-    <td><%= link_to 'Edit', edit_item_path(item) %></td>
-    <td><%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-</table>
 </div>
 
 

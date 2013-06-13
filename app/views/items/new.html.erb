@@ -1,5 +1,11 @@
-<h1>New item</h1>
+<div class="row">
+  <div id="proxima" class="large-8 large-centered columns">
 
-<%= render 'form' %>
+    <h1>New item</h1>
 
-<%= link_to 'Back', items_path %>
+    <%= render 'form' %>
+
+    <%= link_to 'My Collection', :controller => "users", :action => "show", :id => current_user.id %>
+
+  </div>
+</div>

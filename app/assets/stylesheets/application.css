@@ -21,9 +21,18 @@
   font-family: Proxima-Nova;
 }
 
+#center {
+  text-align: center;
+  margin: auto;
+}
+
 .editlink {
   font-family: Proxima-Nova;
   font-size: 15px;
+}
+
+#descriptionarea {
+  height: 50px;
 }
 
 .icon-heart {
