@@ -6,7 +6,7 @@
     <ul class="hmenu">
        <% if user_signed_in? %>
         <li><%= link_to("sign out", destroy_user_session_path, :method => "delete") %></li>
-        <li><a href="/users/<%= current_user.id %>">{ my library }</a>
+        <li><a href="/users/<%= current_user.id %>">{ my collection }</a>
       <% else %>
         <li><%= link_to("register", new_user_registration_path) %></li>
         <li><%= link_to("sign in", new_user_session_path) %></li>
