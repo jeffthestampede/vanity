@@ -21,6 +21,11 @@
   font-family: Proxima-Nova;
 }
 
+.editlink {
+  font-family: Proxima-Nova;
+  font-size: 15px;
+}
+
 .icon-heart {
   color:pink;
 }
