@@ -17,6 +17,10 @@
   src: url('ProximaNova-Light.otf');
 }
 
+#proxima {
+  font-family: Proxima-Nova;
+}
+
 .icon-heart {
   color:pink;
 }
