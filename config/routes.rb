@@ -7,6 +7,8 @@ Vanity::Application.routes.draw do
 
   get '/users/:id', :to => 'users#show', :as => 'users_show'
 
+  get '/users/:id/list', :to => 'users#list'
+
 
 
   # The priority is based upon order of creation:
