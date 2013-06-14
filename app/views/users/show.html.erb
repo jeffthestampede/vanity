@@ -15,19 +15,21 @@
 </div>
 
 <div class="row">
-  <div id="wrapper">
-    <div id="columns">
-      <% @items.each do |item| %>
-      <a href="<%= url_for(:controller => 'items', :action => 'show', :id => item.id) %>">
-      <div class="pin">
-        <img src="<%= item.picture_url %>" />
-        <p>
-          <%= item.brand %> <%= item.name %>
-        </p>
+  <div class="large-12 large-centered columns">
+    <div id="wrapper">
+      <div id="columns">
+        <% @items.each do |item| %>
+        <a href="<%= url_for(:controller => 'items', :action => 'show', :id => item.id) %>">
+        <div class="pin">
+          <img src="<%= item.picture_url %>" />
+          <p>
+            <%= item.brand %> <%= item.name %>
+          </p>
+        </div>
+        </a>
+        <% end %>
       </div>
-      </a>
-      <% end %>
-   </div>
+    </div>
   </div>
 </div>
 
