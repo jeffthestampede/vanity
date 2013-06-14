@@ -1,4 +1,14 @@
 <div class="row">
+  <div class="large-9 columns">
+    <h1 class="header-title">My Collection <i class="icon-gift"></i></h1>
+  </div>
+  <div class="large-3 columns editlink">
+    <%= link_to('edit registration', edit_user_registration_path) %> |
+    <%= link_to("sign out", destroy_user_session_path, :method => "delete") %>
+  </div>
+</div>
+
+<div class="row">
   <div id="proxima" class="large-12 columns">
     <table id="center" class="collection-table">
       <tr>
