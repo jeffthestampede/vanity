@@ -1,40 +1,26 @@
-<p id="notice"><%= notice %></p>
+<div class="row">
+  <div id="proxima" class="large-8 large-centered columns">
+    <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Name:</b>
-  <%= @item.name %>
-</p>
+    <dl id="proxima" class="details">
+      <dt>Name:</dt>
+        <dd><%= @item.name %></dd>
+      <dt>Brand:</dt>
+        <dd><%= @item.brand %></dd>
+      <dt>Category:</dt>
+        <dd><%= @item.category %></dd>
+      <dt>Description:</dt>
+        <dd><%= @item.description %></dd>
+      <dt>Purchase Date:</dt>
+        <dd><%= @item.purchase_date %></dd>
+      <dt>Expiration Date:</dt>
+        <dd><%= @item.exp_date %></dd>
+      <dt>Picture/Swatch:</dt>
+    </dl>
+      <div id="center"><%= image_tag(@item.picture_url) %></div>
 
-<p>
-  <b>Brand:</b>
-  <%= @item.brand %>
-</p>
+    <%= link_to 'Edit', edit_item_path(@item) %> |
+    <%= link_to 'back to my collection', :controller => "users", :action => "show", :id => current_user.id %>
+  </div>
+</div>
 
-<p>
-  <b>Category:</b>
-  <%= @item.category %>
-</p>
-
-<p>
-  <b>Description:</b>
-  <%= @item.description %>
-</p>
-
-<p>
-  <b>Purchase date:</b>
-  <%= @item.purchase_date %>
-</p>
-
-<p>
-  <b>Exp date:</b>
-  <%= @item.exp_date %>
-</p>
-
-<p>
-  <b>Picture/Swatch</b>
-  <%= image_tag(@item.picture_url) %>
-</p>
-
-
-<%= link_to 'Edit', edit_item_path(@item) %> |
-<%= link_to 'My Collection', :controller => "users", :action => "show", :id => current_user.id %>

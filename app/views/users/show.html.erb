@@ -1,7 +1,7 @@
 <div class="row">
   <div class="large-9 columns">
     <h1 class="header-title">My Collection <i class="icon-gift"></i></h1>
-    <a href="/items/new" id="proxima" class="button secondary round">Add Item</a>
+    <a href="/items/new" id="proxima" class="button secondary">Add Item</a>
   </div>
   <div class="large-3 columns editlink">
     <%= link_to('Edit Registration', edit_user_registration_path) %>
@@ -31,12 +31,13 @@
           <td><%= item.exp_date %></td>
           <td><%= link_to 'Details', item %></td>
           <td><%= link_to 'Edit', edit_item_path(item) %></td>
-          <td><%= link_to 'Delete', item, method: :delete, data: { confirm: 'Are you sure?' }, :controller => "users", :action => "show", :id => current_user.id %></td>
+          <td><%= link_to 'Delete', item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         </tr>
       <% end %>
     </table>
   </div>
 </div>
+<br>
 
 <div class= "row">
     <ul class="large-block-grid-4">

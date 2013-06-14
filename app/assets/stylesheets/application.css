@@ -12,7 +12,12 @@
  *= require_tree .
  */
 
- @font-face {
+@font-face {
+  font-family: Proxima-Nova-Bold;
+  src: url('ProximaNova-Bold.otf');
+}
+
+@font-face {
   font-family: Proxima-Nova;
   src: url('ProximaNova-Regular.otf');
 }
@@ -29,10 +34,6 @@
 .editlink {
   font-family: Proxima-Nova;
   font-size: 15px;
-}
-
-#descriptionarea {
-  height: 50px;
 }
 
 .icon-heart {
@@ -56,6 +57,20 @@ ul.hmenu li {
   display: inline;
   font-size: 15px;
 
+}
+
+dl.details {
+  font-size: 15px;
+}
+
+dl dt {
+  font-family: Proxima-Nova-Bold;
+  text-align: right;
+  float: left;
+}
+
+dl dd {
+  margin-left: 140px;
 }
 
 .tagline {
