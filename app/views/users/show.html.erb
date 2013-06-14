@@ -14,46 +14,25 @@
 </div>
 
 <div class="row">
-  <div id="proxima" class="large-12 columns">
-    <table id="center" class="collection-table">
-      <tr>
-        <th id="bold">Brand</th>
-        <th id="bold">Name</th>
-        <th id="bold">Category</th>
-        <th id="bold">Purchase Date</th>
-        <th id="bold">Expiration Date</th>
-        <th></th>
-        <th></th>
-        <th></th>
-      </tr>
-
-      <% @items.each do |item| %>
-        <tr>
-          <td><%= item.brand %></td>
-          <td><%= item.name %></td>
-          <td><%= item.category %></td>
-          <td><%= item.purchase_date %></td>
-          <td><%= item.exp_date %></td>
-          <td><%= link_to 'details', item %></td>
-          <td><%= link_to 'edit', edit_item_path(item) %></td>
-          <td><%= link_to 'delete', item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        </tr>
-      <% end %>
-    </table>
+  <div class="large-12 columns">
+    <div id="wrapper">
+      <div id="columns">
+        <% @items.each do |item| %>
+        <div class="pin">
+          <a href="<%= url_for(:controller => 'items', :action => 'show', :id => item.id) %>"><img src="<%= item.picture_url %>" /></a>
+          <p>
+            <%= item.brand %> <%= item.name %>
+          </p>
+        </div>
+        <% end %>
+     </div>
+    </div>
   </div>
 </div>
-<br>
 
 
-<div class= "row">
-  <ul data-orbit>
-    <% @items.each do |item| %>
-    <li>
-      <img src="<%= item.picture_url %>" />
-    </li>
-    <% end %>
-  </ul>
-</div>
+
+
 
 
 
