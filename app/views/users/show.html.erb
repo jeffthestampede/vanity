@@ -14,20 +14,23 @@
   <a href="/users/<%=current_user.id%>/list" id="proxima" >List View <i class="icon-list"></i></a>
 </div>
 
-<div id="wrapper">
-  <div id="columns">
-    <% @items.each do |item| %>
-    <a href="<%= url_for(:controller => 'items', :action => 'show', :id => item.id) %>">
-    <div class="pin">
-      <img src="<%= item.picture_url %>" />
-      <p>
-        <%= item.brand %> <%= item.name %>
-      </p>
-    </div>
-    </a>
-    <% end %>
- </div>
+<div class="row">
+  <div id="wrapper">
+    <div id="columns">
+      <% @items.each do |item| %>
+      <a href="<%= url_for(:controller => 'items', :action => 'show', :id => item.id) %>">
+      <div class="pin">
+        <img src="<%= item.picture_url %>" />
+        <p>
+          <%= item.brand %> <%= item.name %>
+        </p>
+      </div>
+      </a>
+      <% end %>
+   </div>
+  </div>
 </div>
+
 
 
 
