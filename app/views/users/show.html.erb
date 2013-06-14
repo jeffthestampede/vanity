@@ -45,5 +45,15 @@
 <br>
 
 
+<div class= "row">
+  <ul data-orbit>
+    <% @items.each do |item| %>
+    <li>
+      <img src="<%= item.picture_url %>" />
+    </li>
+    <% end %>
+  </ul>
+</div>
+
 
 

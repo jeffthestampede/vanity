@@ -12,4 +12,8 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require vendor/custom.modernizr.js
+//= require vendor/jquery.js
+//= require vendor/zepto.js
+//= require foundation.min.js
 //= require_tree .
