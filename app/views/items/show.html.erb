@@ -1,26 +1,34 @@
 <div class="row">
   <div id="proxima" class="large-8 large-centered columns">
     <p id="notice"><%= notice %></p>
-
-    <dl id="proxima" class="details">
-      <dt>Name:</dt>
-        <dd><%= @item.name %></dd>
-      <dt>Brand:</dt>
-        <dd><%= @item.brand %></dd>
-      <dt>Category:</dt>
-        <dd><%= @item.category %></dd>
-      <dt>Description:</dt>
-        <dd><%= @item.description %></dd>
-      <dt>Purchase Date:</dt>
-        <dd><%= @item.purchase_date %></dd>
-      <dt>Expiration Date:</dt>
-        <dd><%= @item.exp_date %></dd>
-      <dt>Picture/Swatch:</dt>
-    </dl>
+    <div class="small-5 columns">
+      <dl id="proxima" class="details">
+        <dt>Name:</dt>
+          <dd><%= @item.name %></dd>
+        <dt>Brand:</dt>
+          <dd><%= @item.brand %></dd>
+        <dt>Category:</dt>
+          <dd><%= @item.category %></dd>
+        <dt>Description:</dt>
+          <dd><%= @item.description %></dd>
+        <dt>Purchase Date:</dt>
+          <dd><%= @item.purchase_date %></dd>
+        <dt>Expiration Date:</dt>
+          <dd><%= @item.exp_date %></dd>
+      </dl>
+    </div>
+    <div class="small-7 columns">
+      <div class="picture-title">Picture/Swatch:</div>
       <div id="center"><%= image_tag(@item.picture_url) %></div>
-
-    <%= link_to 'Edit', edit_item_path(@item) %> |
-    <%= link_to 'back to my collection', :controller => "users", :action => "show", :id => current_user.id %>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div id="proxima" class="large-12 columns">
+    <div id="center">
+      <%= link_to 'edit', edit_item_path(@item) %> |
+      <%= link_to 'back to my collection', :controller => "users", :action => "show", :id => current_user.id %>
+    </div>
   </div>
 </div>
 

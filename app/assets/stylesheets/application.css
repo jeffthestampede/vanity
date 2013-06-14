@@ -31,6 +31,10 @@
   margin: auto;
 }
 
+#bold {
+  font-family: Proxima-Nova-Bold;
+}
+
 .editlink {
   font-family: Proxima-Nova;
   font-size: 15px;
@@ -65,12 +69,16 @@ dl.details {
 
 dl dt {
   font-family: Proxima-Nova-Bold;
-  text-align: right;
-  float: left;
 }
 
 dl dd {
-  margin-left: 140px;
+  margin-left: 20px;
+}
+
+.picture-title {
+  font-size: 15px;
+  font-family: Proxima-Nova-Bold;
+  margin-top: 5px;
 }
 
 .tagline {

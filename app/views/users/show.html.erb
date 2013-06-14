@@ -1,22 +1,27 @@
 <div class="row">
   <div class="large-9 columns">
     <h1 class="header-title">My Collection <i class="icon-gift"></i></h1>
-    <a href="/items/new" id="proxima" class="button secondary">Add Item</a>
   </div>
   <div class="large-3 columns editlink">
-    <%= link_to('Edit Registration', edit_user_registration_path) %>
+    <%= link_to('edit registration', edit_user_registration_path) %>
+  </div>
+</div>
+
+<div class="row">
+  <div class="large-3 columns large-centered">
+    <a href="/items/new" id="proxima" class="button secondary expand">Add Item</a>
   </div>
 </div>
 
 <div class="row">
   <div id="proxima" class="large-12 columns">
-    <table id="center">
+    <table id="center" class="collection-table">
       <tr>
-        <th>Brand</th>
-        <th>Name</th>
-        <th>Category</th>
-        <th>Purchase Date</th>
-        <th>Expiration Date</th>
+        <th id="bold">Brand</th>
+        <th id="bold">Name</th>
+        <th id="bold">Category</th>
+        <th id="bold">Purchase Date</th>
+        <th id="bold">Expiration Date</th>
         <th></th>
         <th></th>
         <th></th>
@@ -29,9 +34,9 @@
           <td><%= item.category %></td>
           <td><%= item.purchase_date %></td>
           <td><%= item.exp_date %></td>
-          <td><%= link_to 'Details', item %></td>
-          <td><%= link_to 'Edit', edit_item_path(item) %></td>
-          <td><%= link_to 'Delete', item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <td><%= link_to 'details', item %></td>
+          <td><%= link_to 'edit', edit_item_path(item) %></td>
+          <td><%= link_to 'delete', item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         </tr>
       <% end %>
     </table>
@@ -39,12 +44,23 @@
 </div>
 <br>
 
-<div class= "row">
-    <ul class="large-block-grid-4">
-      <% @items.each do |item| %>
-        <li><%= image_tag(item.picture_url) %></li>
-      <% end %>
-    </ul>
-</div>
+
+
+<ul data-orbit>
+  <li>
+    <img src="../img/demos/demo1.jpg" />
+    <div class="orbit-caption">fdsadf</div>
+  </li>
+  <li>
+    <img src="../img/demos/demo2.jpg" />
+    <div class="orbit-caption">sadfasdfsadfasd</div>
+  </li>
+  <li>
+    <img src="../img/demos/demo3.jpg" />
+    <div class="orbit-caption">......</div>
+  </li>
+</ul>
+
+
 
 
